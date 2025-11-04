@@ -1,0 +1,16 @@
+1.- git clone
+git clone https://github.com/sevid42/ml_forecast_time_series.git
+
+2.- saber status de los archivos
+git status
+
+# 2. Agregar archivos al staging area
+git add .                    # Agrega todos los archivos modificados
+git add archivo.txt          # Agrega un archivo específico
+
+# 3. Hacer commit de los cambios
+git commit -m "Descripción de los cambios"
+
+# 4. Subir los cambios a GitHub
+git push origin main         # Si tu rama principal es 'main'
+git push origin master       # Si tu rama principal es 'master'
