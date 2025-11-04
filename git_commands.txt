@@ -4,13 +4,52 @@ git clone https://github.com/sevid42/ml_forecast_time_series.git
 2.- saber status de los archivos
 git status
 
-# 2. Agregar archivos al staging area
+3.- Agregar archivos al staging area
 git add .                    # Agrega todos los archivos modificados
 git add archivo.txt          # Agrega un archivo específico
 
-# 3. Hacer commit de los cambios
-git commit -m "Descripción de los cambios"
+4.- Primero creo el usuario por que sino no me dejara hacer commit
+git config --global user.email "sevid.progg@gmail.com"
+git config --global user.name "sevid"
 
-# 4. Subir los cambios a GitHub
+4. Hacer commit de los cambios
+git commit -m "Primer archivo creado"
+
+5. Subir los cambios a GitHub
 git push origin main         # Si tu rama principal es 'main'
 git push origin master       # Si tu rama principal es 'master'
+
+--------------------------
+6. ver ramas
+# Ver ramas locales
+git branch
+
+# Ver todas las ramas (locales y remotas)
+git branch -a
+
+# Ver la rama actual
+git branch --show-current
+
+7. Crear rama 
+# Opción 1: Crear y cambiar en un solo comando (recomendado)
+git checkout -b dev
+
+# Opción 2: Crear y cambiar en dos pasos
+git branch dev        # Crear la rama
+git checkout dev      # Cambiar a la rama
+
+---------------
+9. Traer los últimos cambios de main:
+# Opción 1: Actualizar main y fusionar con dev (recomendado)
+git checkout main           # Cambiar a main
+git pull origin main        # Traer cambios de GitHub
+git checkout dev            # Volver a dev
+git merge main              # Fusionar los cambios de main a dev
+
+
+10. Modificar archivos y hacer commit:
+git status                           # Ver qué cambió
+git add .                            # Agregar cambios
+git commit -m "Update archivo git_commands.txt"
+
+
