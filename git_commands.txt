@@ -52,4 +52,19 @@ git status                           # Ver qué cambió
 git add .                            # Agregar cambios
 git commit -m "Update archivo git_commands.txt"
 
+11. Subir la rama dev a GitHub:
+# Primera vez que subes la rama
+git push -u origin dev
 
+# Siguientes veces (después del primer push)
+git push
+
+--------------------RESUMEN PARA SUBIR cambios
+git checkout main                    # Ir a main
+git pull origin main                 # Actualizar main
+git checkout dev                     # Volver a dev
+git merge main                       # Traer cambios de main
+# ... modificas archivos ...
+git add .                            # Agregar cambios
+git commit -m "Nuevas funcionalidades"
+git push -u origin dev               # Subir rama dev por primera vez
