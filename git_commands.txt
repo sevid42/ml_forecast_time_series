@@ -68,4 +68,49 @@ git merge main                       # Traer cambios de main
 git add .                            # Agregar cambios
 git commit -m "Nuevas funcionalidades"
 git push -u origin dev               # Subir rama dev por primera vez
---
+
+
+--------------------RESUMEN PARA SUBIR cambios YA EXISTIENDO DEV
+# FLUJO COMPLETO:
+
+# 1. Actualizar dev con main
+git checkout main
+git pull origin main
+git checkout dev
+git merge main
+
+# 2. Hacer cambios
+# ... modificar archivos ...
+
+# 3. Commit y push
+git add .
+git commit -m "Nuevas funcionalidades"
+git push                             # ✅ SIN -u
+
+# 4. Llevar a main (Pull Request)
+# Ir a GitHub → crear PR → merge
+
+# 5. Actualizar main local
+git checkout main
+git pull origin main
+
+# ════════════════════════════════════════════════════════════════
+# COMANDOS COMPLETOS EN ORDEN
+# ════════════════════════════════════════════════════════════════
+
+# Al empezar el día:
+git checkout main
+git pull origin main
+git checkout dev
+git merge main
+
+# Trabajar:
+git add .
+git commit -m "Mensaje descriptivo"
+git push
+
+# Llevar a main (después de crear y mergear PR):
+git checkout main
+git pull origin main
+git checkout dev
+git merge main
