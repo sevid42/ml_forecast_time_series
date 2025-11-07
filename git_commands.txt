@@ -106,10 +106,10 @@ git merge main
 
 # Trabajar:
 git add .
-git commit -m "Mensaje descriptivo"
+git commit -m "Mensaje descriptivo de prueba"
 git push
 
-# Llevar a main (después de crear y mergear PR):
+# Llevar a main (después de crear y mergear  Pull Request):
 git checkout main
 git pull origin main
 git checkout dev
